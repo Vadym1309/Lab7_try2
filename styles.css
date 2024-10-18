@@ -1,0 +1,154 @@
+:root {
+    --primary-color: #3498db; /* Головний синій колір */
+    --secondary-color: #2ecc71; /* Яскравий зелений для акцентів */
+    --background-color: #f4f7f6; /* Світлий фон */
+    --text-color: #333; /* Темний текст */
+    --button-bg: #2980b9; /* Колір фону для кнопок */
+    --button-text: #fff; /* Колір тексту на кнопках */
+    --header-bg: #34495e; /* Фон для заголовків */
+    --hover-color: #1abc9c; /* Колір при наведенні */
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+h1 {
+    background-color: var(--header-bg);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+
+#btn {
+    margin: 20px auto;
+    display: block;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    background-color: var(--secondary-color);
+    color: var(--button-text);
+    padding: 5px;
+}
+.owl-carousel .item img {
+    width: 100%;
+    height: auto;
+}
+/* styles.css */
+
+/* Зміна стилю для Datepicker */
+/* styles.css */
+
+/* Зміна стилю для Datepicker */
+.ui-datepicker {
+    background-color: #ffeb3b !important; /* Змінено фон на жовтий */
+    border: 2px solid #673ab7 !important; /* Додавання фіолетової рамки */
+    border-radius: 10px !important; /* Закруглені кути */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important; /* Тінь */
+    font-family: 'Arial', sans-serif !important; /* Зміна шрифту */
+    color: #000 !important; /* Текст чорного кольору */
+}
+
+.ui-datepicker .ui-datepicker-header {
+    background-color: #673ab7 !important; /* Фіолетовий фон для заголовку */
+    color: white !important; /* Білий текст */
+    padding: 10px !important;
+    border-bottom: 2px solid #ffeb3b !important; /* Жовта рамка знизу */
+}
+
+.ui-datepicker .ui-datepicker-calendar td a {
+    background-color: #e1bee7 !important; /* Світло-фіолетовий фон для дат */
+    color: #000 !important; /* Чорний текст */
+    padding: 5px !important;
+    border-radius: 50% !important; /* Закруглення дат */
+}
+
+.ui-datepicker .ui-datepicker-calendar td a:hover {
+    background-color: #ffeb3b !important; /* Жовтий фон при наведенні */
+    color: #673ab7 !important; /* Фіолетовий текст при наведенні */
+}
+
+/* Зміна стилю для Slider */
+.ui-slider-horizontal {
+    height: 10px !important; /* Змінення висоти */
+    background-color: #e1bee7 !important; /* Світло-фіолетовий фон */
+    border-radius: 5px !important;
+    border: 1px solid #673ab7 !important; /* Фіолетова рамка */
+    margin-bottom: 20px !important;
+}
+
+.ui-slider-handle {
+    width: 20px !important; /* Ширина ручки */
+    height: 20px !important; /* Висота ручки */
+    background-color: #673ab7 !important; /* Фіолетова ручка */
+    border: 2px solid #ffeb3b !important; /* Жовта рамка навколо ручки */
+    border-radius: 50% !important; /* Закруглення ручки */
+    cursor: pointer !important;
+}
+
+.ui-slider-handle:hover {
+    background-color: #ffeb3b !important; /* Жовта ручка при наведенні */
+    border-color: #673ab7 !important; /* Фіолетова рамка при наведенні */
+}
+.ui-accordion .ui-accordion-header {
+    background-color: #673ab7; /* Фіолетовий фон для заголовків */
+    color: white; /* Білий текст */
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.ui-accordion .ui-accordion-content {
+    background-color: #e1bee7; /* Світло-фіолетовий фон для контенту */
+    padding: 15px;
+    border-left: 4px solid #673ab7; /* Фіолетова ліва рамка */
+    color: #000;
+}
+

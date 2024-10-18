@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab7</title>
+    <link rel="stylesheet" href="./styles.css">
+    
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+</head>
+<body>
+    <div class="container"> 
+        <h1>Лабораторна робота 7</h1>
+        <h2>Українець Вадим</h2>
+        
+        <!-- Button -->
+        <button id="btn">Нажміть мене</button>
+        
+        <!-- Owl Carousel -->
+        <h2>ФОРСАЖ МАШИНКИ</h2>
+        <div class="owl-carousel">
+            <div class="item">
+                <img src="images/photo1.jpg" alt="Фото 1">
+                <p>Mitsubishi Eclipse</p>
+            </div>
+            <div class="item">
+                <img src="images/photo2.jpg" alt="Фото 2">
+                <p>Honda Civic</p>
+            </div>
+            <div class="item">
+                <img src="images/photo3.jpg" alt="Фото 3">
+                <p>Toyota Supra</p>
+            </div>
+            <div class="item">
+                <img src="images/photo4.jpg" alt="Фото 4">
+                <p>Nissan Skyline</p>
+            </div>
+            <div class="item">
+                <img src="images/photo5.jpg" alt="Фото 5">
+                <p>Mitsubishi Lancer</p>
+            </div>
+        </div>
+        
+        <!-- Datepicker Example -->
+        <h2>Дата</h2>
+        <input type="text" id="datepicker">
+
+        <!-- Slider Example -->
+        <h2>Значення</h2>
+        <div id="slider"></div>
+        <p>Скільки літрів живчику мені випити сьогодні: <span id="slider-value">50</span></p>
+
+        <p title="Не підкажу">Підказка.</p>
+        
+        <!-- Accordion Example -->
+        <h2>Штуки які розгортаються (Accordion)</h2>
+        <div id="accordion">
+            <h3>1</h3>
+            <div>
+                <p>Тут пусто.</p>
+            </div>
+            <h3>2</h3>
+            <div>
+                <p>Тут також.</p>
+            </div>
+            <h3>3</h3>
+            <div>
+                <p>Фінансування нема, тому тут також нічого не буде.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            // Owl Carousel Initialization
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 3
+                    }
+                }
+            });
+
+            // Datepicker Initialization
+            $("#datepicker").datepicker({
+                dateFormat: "dd.mm.yy",   // Формат дати
+                showAnim: "slideDown",    // Анімація при відкритті
+                minDate: 0,               // Мінімальна дата - сьогодні
+                maxDate: "+1M +10D"       // Максимальна дата - один місяць і 10 днів від сьогодні
+            });
+
+            // Slider Initialization
+            $("#slider").slider({
+                range: "min",
+                value: 50,                // Початкове значення
+                min: 0,                   // Мінімальне значення
+                max: 100,                 // Максимальне значення
+                step: 10,                 // Крок
+                slide: function(event, ui) {
+                    $("#slider-value").text(ui.value);  // Відображення значення
+                }
+            });
+
+            // Tooltip Initialization
+            $(document).tooltip({
+                show: { effect: "fadeIn", duration: 500 },  // Анімація для показу
+                hide: { effect: "fadeOut", duration: 500 }, // Анімація для приховування
+                position: {
+                    my: "center bottom-20",  // Позиція підказки
+                    at: "center top"         // Відносно елемента
+                }
+            });
+
+            // Accordion Initialization
+            $("#accordion").accordion({
+                collapsible: true,           // Дозволяє згорнути всі секції
+                heightStyle: "content",      // Висота підлаштовується під контент
+                active: 1                    // Відкриття другої секції по замовчуванню
+            });
+
+            // Button Clicker Event
+            $("#btn").click(function(){
+                alert("Ну і для чого Ви це зробили!?");
+            });
+        });
+    </script>
+</body>
+</html>
